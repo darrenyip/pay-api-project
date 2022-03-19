@@ -1,13 +1,484 @@
+/* File: font.css */
+@font-face {
+  font-family: "DM-Serif-Display-Regular";
+  src: local("DMSerifDisplay-Regular"),
+    url("./assets/fonts/DMSerifDisplay-Regular.ttf") format("truefonttype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-pink: #ba4270;
+  --link-water-white: #fbfcfe;
+  --san-juan-blue: #36536b;
+  --mirage-blue: #1b262f;
+  --charm-pink: #da6d97;
+  --light-san-juan-blue: #6c8294;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #edf3f8;
+  color: var(--light-san-juan-blue);
+}
+
+.font-white {
+  color: white;
+}
+
+.f-bold {
+  font-weight: 900;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.design-page-top-nav {
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--mirage-blue);
+}
+
+.top-nav-bg-circle {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+  background-color: var(--san-juan-blue);
+  bottom: -12vw;
+  right: -43vw;
+  opacity: 0.3;
+}
+
+.logo-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-wrap .p {
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.design-page-top-nav-inner {
+  width: 100%;
+  max-width: 932px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 24px;
+  font-family: "DM-Serif-Display-Regular";
+}
+
+.publibsans {
+  font-family: "Public Sans";
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 72px;
+  color: var(--san-juan-blue);
+}
+.h1-small {
+  font-size: 56px;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  color: var(--san-juan-blue);
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 40px;
+}
+.h3-small {
+  font-size: 32px;
+  line-height: 25px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+h5 {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--san-juan-blue);
+}
+
+p {
+  font-family: "Public Sans";
+  font-size: 15px;
+  line-height: 28px;
+}
+/* LoVe HAte */
+a {
+  font-family: "Public Sans";
+  text-decoration: none;
+  color: var(--san-juan-blue);
+  font-weight: bold;
+  font-size: 15px;
+}
+a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+/* General Css  */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* max-width: 327px; */
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-3 {
+  margin-bottom: 32;
+}
+ul {
+  list-style-type: none;
+}
+input,
+button {
+  border-radius: 24px;
+}
+input {
+  margin-bottom: 16px;
+}
+
+.center {
+  text-align: center;
+}
+/* Buttons */
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  max-width: 327px;
+  cursor: pointer;
+  /* margin-bottom: 16px; */
+}
+.btn-primary {
+  background-color: var(--dark-pink);
+  color: white;
+}
+.btn-hollow {
+  background: transparent;
+  border: 1px solid #fbfcfe;
+  text-align: center;
+  padding-top: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+}
+.btn-hollow:hover {
+  background: white;
+  color: var(--mirage-blue);
+  border: var(--mirage-blue) 1px solid;
+}
+
+.hidden-on-desktop {
+  display: none;
+}
+.hidden-on-mobile {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .hidden-on-desktop {
+    display: block;
+  }
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+/* Navigation */
+
+.nav-wpr {
+  max-width: 325px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.nav-menu {
+  width: 50%;
+}
+.nav-menu ul {
+  display: flex;
+  padding-left: 0;
+  justify-content: space-around;
+}
+.nav-menu ul li {
+  flex: 0 1;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-wpr {
+    max-width: 90%;
+  }
+  .sub-button button {
+    width: 173px;
+  }
+}
+
+/* Home page */
+.home-hero hero-section img {
+  width: 266px;
+  margin: 0 auto;
+  transform: translateX(4%);
+}
+.home-hero {
+  position: relative;
+  overflow-x: clip;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  background: #979797;
+  width: 780px;
+  height: 780px;
+  border: none;
+  border-radius: 50%;
+  left: -50%;
+  top: -11%;
+  z-index: -1;
+  opacity: 0.3;
+}
+.hero-section img {
+  transform: translateX(19px);
+}
+.sub-fields {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-field-wpr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  align-content: center;
+  justify-content: center;
+}
+.input-field-wpr input {
+  width: 100%;
+  max-width: 327px;
+  background: #fbfcfe;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: 24px;
+  border: none;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--san-juan-blue);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.input-field-wpr button {
+  width: 100%;
+}
+.parters {
+  background-color: var(--mirage-blue);
+  /* padding-top: 80px; */
+  /* padding-bottom: 80px; */
+}
+.parters .container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.parters .container p {
+  margin-bottom: 32px;
+}
+.parters .flex-six {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.parters .flex-six .svg-wpr {
+  width: 50%;
+  min-height: 28px;
+  margin-bottom: 20px;
+}
+.parters .flex-six svg {
+  display: block;
+  margin: auto;
+}
+.parters .flex-six svg {
+  transform: scale(0.85);
+}
+.parters .svg-wpr:nth-child(1) {
+  padding-top: 6px;
+}
+.parters .svg-wpr:nth-child(4) {
+  padding-top: 5px;
+}
+.parters .svg-wpr:nth-child(6) {
+  padding-top: 3px;
+}
+
+.parters .flex-six svg path {
+  fill: white;
+}
+.parters button.btn {
+  margin: 0 auto;
+  width: 129px;
+}
+
+#img-with-text-1 img {
+  transform: scale(1.3) translateX(9px);
+}
+#img-with-text-2 img {
+  transform: translateX(5px);
+}
+.single-circle-section {
+  margin-bottom: 48px;
+}
+.single-circle-section img {
+  margin: 0 auto;
+  width: 106px;
+  height: 106px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-hero::before {
+    width: 123vw;
+    height: 123vw;
+    left: -10%;
+    top: -14%;
+  }
+
+  .home-hero img {
+    width: 360px;
+    margin: 0 auto;
+  }
+  .home-hero h2 {
+    margin: 0 auto;
+    max-width: 80vw;
+    margin-bottom: 24px;
+  }
+  .input-field-wpr {
+    position: relative;
+    width: 445px;
+  }
+  .input-field-wpr button {
+    position: absolute;
+    right: 0;
+    width: 173px;
+  }
+  .input-field-wpr input {
+    max-width: 560px;
+    margin-bottom: 0;
+    width: 100%;
+    padding-bottom: 11px;
+  }
+  .parters .flex-six {
+    margin-bottom: 64px;
+  }
+  .parters .flex-six .svg-wpr {
+    width: 33.33%;
+  }
+  .parters h2,
+  .parters p {
+    width: 457px;
+  }
+  .parters p {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  .img-with-text-secion p {
+    width: 573px;
+    margin: 0 auto;
+  }
+  .three-circle-section {
+    display: flex;
+    justify-content: space-around;
+  }
+  .single-circle-section {
+    width: 223px;
+  }
+  .single-circle-section img {
+    width: 88px;
+    height: 88px;
+  }
+  .ready-to-start .input-field-wpr {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1100px;
+  }
+  .home-hero::before {
+    width: 54vw;
+    height: 54vw;
+    right: 0;
+    top: -18vw;
+    left: 61vw;
+    opacity: 0.15;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 auto;
+  }
+  .text-section-wpr {
+    width: 500px;
+    padding-top: 140px;
+  }
 }
